@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 12px;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    margin-top: 35px;
+}
+
+h1 span {
+    background-color: #808080;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.intro {
+    margin-bottom: 100px;
+}
+
+.blog-section {
+    /*width: 1100px;*/
+    margin: 0 auto;
+}
+
+
+ul {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.comment-item {
+    display: block;
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    border: #808080 1px solid;
+}
+
+.comment-item:last-child {
+    margin-bottom: 40px;
+}
+
+.comment-content {
+    line-height: 1.6em;
+    padding: 14px;
+    word-wrap: break-word;
+    text-wrap: wrap;
+    font-family: 'Press Start 2P', system-ui;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+label {
+    margin: auto;
+}
+
+textarea {
+    font-family: 'Press Start 2P', system-ui;
+    padding: 14px;
+    margin-bottom: 8px;
+    resize: none;
+    width: 100%;
+}
+
+.post-btn {
+    background-color: #000;
+    color: #ffe;
+    margin-bottom: 25px;
+}
+
+.date {
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 8px;
+    font-size: 8px;
+}
+
+.page-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 180px;
+    background: #eee;
+}
+
+.copyright {
+    display: flex;
+    justify-content: end;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 9px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    textarea {
+        font-size: 9px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    body {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    textarea {
+        font-size: 10px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1001px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 96px;
+    }
+
+    textarea {
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 30px;
+    }
+}
