@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'comments/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>AntiAnti Comment Blog</title>
+</head>
+<body>
+<header>
+    <div class="intro">
+        <h1><span>ANTIANTI</span></h1>
+    </div>
+</header>
+
+<main>
+    <section class="blog-section">
+        <form method="POST" action="/home/">
+            {% csrf_token %}
+            <!--                        <label for="comment">Enter comment:</label>-->
+            <label>Enter comment:</label>
+            {{ form.as_p }}
+            <!--            <textarea name="comment" id="comment" cols="96" rows="5" required></textarea>-->
+            <button class="post-btn" onclick>Post</button>
+        </form>
+
+        <ul class="comments-list">
+            {% for comment in comments %}
+            <li class="comment-item">
+                <p class="date"> {{ comment.date }}</p>
+                <pre class="comment-content">{{ comment.input }}</pre>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
+
+<footer class="page-footer">
+    <p class="copyright">Mark Kalyuzhin®</p>
+</footer>
+
+</body>
+</html>
